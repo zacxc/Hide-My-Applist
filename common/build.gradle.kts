@@ -8,6 +8,7 @@ plugins {
 val configVerCode: Int by rootProject.extra
 val serviceVerCode: Int by rootProject.extra
 val minBackupVerCode: Int by rootProject.extra
+val appPackageName: String by rootProject.extra
 
 android {
     namespace = "icu.nullptr.hidemyapplist.common"
@@ -21,6 +22,7 @@ android {
         buildConfigField("int", "CONFIG_VERSION", configVerCode.toString())
         buildConfigField("int", "SERVICE_VERSION", serviceVerCode.toString())
         buildConfigField("int", "MIN_BACKUP_VERSION", minBackupVerCode.toString())
+        buildConfigField("String", "APP_PACKAGE_NAME", "\"${appPackageName}\"")
     }
 }
 
